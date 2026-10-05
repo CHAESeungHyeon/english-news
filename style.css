@@ -410,3 +410,226 @@ body {
   background: #555;
   color: #fff;
 }
+
+/* ===== Responsive ===== */
+@media (max-width: 1240px) {
+  .inner {
+    width: auto;
+    padding: 0 20px;
+  }
+  .gnb .inner {
+    padding: 0;
+  }
+  .gnb .nav-item {
+    flex: 1;
+    width: auto;
+  }
+  .hero .inner {
+    gap: 30px;
+  }
+  .hero img {
+    width: 47%;
+    height: auto;
+    aspect-ratio: 563 / 316;
+  }
+  .card-list {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
+  }
+  .card .thumb img,
+  .video-card .thumb img {
+    height: auto;
+    aspect-ratio: 370 / 229;
+  }
+  /* 서브페이지 사이드 메뉴: 본문 위 가로 탭으로 */
+  .side-menu {
+    position: static;
+    display: flex;
+    width: auto;
+    padding: 0;
+    margin-bottom: 30px;
+    overflow-x: auto;
+  }
+  .side-menu a {
+    padding: 0 20px;
+    line-height: 52px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding: 0 16px;
+  }
+  .header {
+    padding: 16px 0;
+  }
+  .header .logo {
+    max-width: 70%;
+  }
+
+  /* GNB: 4칸 균등, 서브메뉴는 숨김 */
+  .gnb .nav-item {
+    border-left-width: 1px;
+  }
+  .gnb .nav-item:last-child {
+    border-right-width: 1px;
+  }
+  .gnb .nav-item > a {
+    font-size: 13px;
+    line-height: 44px;
+  }
+  .gnb .nav-item:hover .sub {
+    display: none;
+  }
+
+  /* Hero */
+  .hero .inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hero h2 {
+    padding-top: 20px;
+    font-size: 30px;
+    letter-spacing: -1px;
+    white-space: normal;
+  }
+  .hero img {
+    width: 100%;
+  }
+
+  /* 카드 */
+  .main-content {
+    padding: 40px 0 50px;
+  }
+  .level-sec {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+  }
+  .card h3 {
+    font-size: 14px;
+  }
+  .card p,
+  .video-card ul {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .pill {
+    min-width: 0;
+    padding: 0 24px;
+  }
+
+  /* 서브페이지 */
+  .sub-content {
+    padding: 30px 0 50px;
+  }
+  .side-menu a {
+    padding: 0 16px;
+    line-height: 46px;
+    font-size: 15px;
+  }
+  .board th {
+    height: 50px;
+    font-size: 15px;
+  }
+  .board td {
+    height: 48px;
+    font-size: 15px;
+  }
+  .board .no {
+    width: 50px;
+  }
+  .board .view {
+    width: 80px;
+  }
+  .btn-click {
+    width: 64px;
+    line-height: 26px;
+    font-size: 13px;
+  }
+  .article-body {
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .article-body p + p {
+    margin-top: 18px;
+  }
+  .article-btns {
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .article-btns button {
+    flex: 1;
+    width: auto;
+    height: 48px;
+    font-size: 17px;
+  }
+  .study-box {
+    margin: 30px 0 0;
+    padding: 8px;
+    border-radius: 18px;
+  }
+  .study-inner {
+    padding: 70px 14px 20px;
+  }
+  .study-tab {
+    top: -8px;
+    width: 92%;
+    height: auto;
+    padding: 10px 12px 14px;
+    flex-direction: column;
+    gap: 6px;
+    border-radius: 0 0 40px 40px;
+    font-size: 13px;
+  }
+  .study-tab .week {
+    padding: 0 24px;
+  }
+  .study-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .study-grid a {
+    line-height: 52px;
+    font-size: 16px;
+  }
+  .related {
+    margin-top: 50px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 30px 0 40px;
+  }
+  .footer .inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .footer .logo {
+    width: 220px;
+  }
+  .footer address {
+    line-height: 1.8;
+  }
+  .footer-links {
+    margin: 6px 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .gnb .nav-item > a {
+    font-size: 12px;
+  }
+  .hero h2 {
+    font-size: 26px;
+  }
+  .card-list {
+    grid-template-columns: 1fr;
+  }
+}
